@@ -1,6 +1,6 @@
 # Portfólio - Malu BCarmo
 
-Este é o meu portfólio pessoal, criado para mostrar meus projetos, habilidades e informações profissionais de maneira única, com inspiração no universo de Star Wars e nos livros.
+Este é o meu portfólio pessoal, criado para mostrar meus projetos, habilidades e informações profissionais, com inspiração no universo de Star Wars e nos livros, duas paixões pessoais.
 
 ## Licença MIT
 
