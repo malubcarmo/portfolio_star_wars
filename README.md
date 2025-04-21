@@ -48,8 +48,3 @@ A seção de contato inclui:
 - Um botão para visualizar meu currículo em PDF.
 - Links para minhas redes sociais: GitHub, LinkedIn e Behance.
 
-### Instruções de Uso
-
-1. Clone este repositório em seu computador:
-   ```bash
-   git clone https://github.com/SEU_USUARIO/portfolio.git
