@@ -1,21 +1,21 @@
 /* Fonte principal */
 @font-face {
-  font-family: 'Star Jedi';
-  src: url('assets/fonts/Starjedi.ttf') format('truetype');
+  font-family: 'soloist';
+  src: url('../fonts/soloist1.ttf') format('truetype');
 }
 
-/* Fonte secundária*/
 @font-face {
-  font-family: 'Star Jedi Hollow';
-  src: url('assets/fonts/Starjhol.ttf') format('truetype');
+  font-family: 'soloist-left';
+  src: url('../fonts/soloistleft1.ttf') format('truetype');
 }
-
 body {
   margin: 0;
-  background-color: #0B0C10; 
+  background-color: #000; 
   color: #C5C6C7;
-  font-family: 'Star Jedi', sans-serif;
+  font-family: 'soloist', sans-serif;
+  padding-top: 70px;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -28,41 +28,52 @@ header {
 }
 
 .navbar {
+  background-color: #1f2833;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px;
-  background-color: #0D1B2A; 
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .logo img {
-  height: 50px;
+  height: 80px;
 }
 
-/* --- Links do menu --- */
 .nav-links {
   display: flex;
   gap: 20px;
 }
 
 .nav-links a {
-  color: #3A9AD9; 
+  color: #66fcf1;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
-  
 }
+
 
 /* --- CONTEÚDO --- */
 section {
-  padding: 60px 20px;
+  padding: 100px 20px;
+  max-width: 1200px;
   margin: 0 auto;
+  /*min-height: 100vh;*/
 }
 
 h1, h2 {
   color: #66fcf1;
   text-align: center;
-  font-family: 'Star Jedi Hollow', sans-serif;
+  font-family: 'soloist-left', sans-serif;
 }
 
 .apresentacao {
@@ -240,8 +251,9 @@ h1, h2 {
 
 .contato-info {
   flex: 1;
-  text-align: center;
-  padding: 0 20px;
+  text-align: left;
+  padding: 0 100px;       /* Apenas padding horizontal */
+  margin-left: 20px;     /* Mantém espaço entre imagem e texto */
 }
 
 .contato-info h2 {
@@ -295,6 +307,88 @@ h1, h2 {
   color: #FFD700; 
 }
 
+.formulario-contato {
+  background-color: #000;
+  border: 2px solid #FFD700;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 700px;
+  height: 100%;
+  margin: 80px auto 0 auto;
+  color: #FFD700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.formulario-contato form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.formulario-contato label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  margin-bottom: 15px;
+  width: 97%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #FFD700;
+  background-color: #1f2833;
+  color: #fff;
+}
+
+.formulario-contato button {
+  padding: 10px 20px;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario-contato button:hover {
+  background-color: #e6c200;
+}
+
+.mensagem-confirmacao {
+  display: none;
+  color: #0B0C10;
+  background-color: #FFD700;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  border: 2px solid #FFF176;
+  text-align: center;
+  animation: aparecer 0.5s ease;
+}
+
+.mensagem-confirmacao i {
+  margin-right: 10px;
+  color: #0B0C10;
+  font-size: 20px;
+}
+
+/* Animação suave ao exibir */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 /* --- Rodapé --- */
 footer {
@@ -306,7 +400,7 @@ footer {
 }
 
 /* --- RESPONSIVIDADE --- */
-@media (max-width: 76px) {
+@media (max-width: 768px) {
   .projetos {
     flex-direction: column;
     align-items: center;

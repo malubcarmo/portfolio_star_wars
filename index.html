@@ -10,24 +10,30 @@
     <link rel="icon" type="image/png" href="img/logos/logo2.png"> <!-- Ícone na aba -->
     <link rel="stylesheet" href="assets/css/style.css"> <!-- Link para o css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> <!-- Link para o site dos ícones -->
+    <script src="validacao.js"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="navbar">
+      <div class="navbar">
+          <div class="container">
             <div class="logo">
-                <img src="logo.png" alt="Logo" />
+                <img src="img/logo.png" alt="Logo" />
             </div>
             <nav class="nav-links" id="navLinks">
-                <a href="#apresentacao">Sobre</a>
+                <a href="#apresentacao">Início</a>
                 <a href="#habilidades">Habilidades</a>
                 <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
             </nav>
-            </div>
+          </div>
         </div>
     </header>
       <main>
         <div class="container">
+          <!-- Banner principal -->
+          <section class="banner" id="content">
+              <img id="Banner" src="img/banner.png" alt="Promoção especial: Café Expresso com 70% de desconto - Compre um e ganhe dois">              
+          </section>
         <section id="apresentacao" class="apresentacao">
             <h1>Olá! Eu sou a Malu</h1>
             <p>Sou apaixonada por desenvolvimento, livros e o universo de Star Wars. Meu portfólio é uma jornada entre códigos e galáxias!</p>
@@ -111,11 +117,10 @@
         </section>
         <section id="contato" class="contato">
             <h2>Contato</h2>
-            <div class="contato-container">
-              
+            <div class="contato-container">             
               <!-- Esquerda: Imagem redonda estilo Estrela da Morte -->
               <div class="contato-imagem">
-                <img src="imagens/estrela-da-morte.png" alt="Estrela da Morte">
+                <img src="img/estrela_da_morte.png" alt="Estrela da Morte">
               </div>
           
               <!-- Centro: Nome e botão de currículo -->
@@ -129,8 +134,27 @@
                 <a href="https://github.com/malubcarmo" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/marialuizabc/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.behance.net/malubispo1/projects" target="_blank"><i class="fa-brands fa-behance"></i></a>
+              </div>         
+            </div>
+              <!-- Formulário de contato -->
+            <div class="formulario-contato">
+              <form id="contatoForm" action="#" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+                
+                <button type="submit">Enviar</button>
+              </form>
+              <div id="mensagem-confirmacao" class="mensagem-confirmacao">
+              <div id="mensagem-confirmacao" style="display: none; color: #FFD700; text-align: center; margin-top: 20px;"></div>
+                <i class="fa-solid fa-circle-check"></i> Mensagem enviada com sucesso!
               </div>
-          
+              
             </div>
           </section>         
     </div>
