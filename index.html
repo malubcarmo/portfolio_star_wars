@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MALUB - Frase de efeito">
+    <meta name="description" content="Site para portfólio de Maria Carmo, estudante de sistemas de informação">
     <meta name="keywords" content="programação, ilustração, livros">
-    <meta name="author" content="Maria Luiza Bispo">
+    <meta name="author" content="Maria Carmo">
     <title>Malu BCarmo</title>
-    <link rel="icon" type="image/png" href="img/logo2.png"> <!-- Ícone na aba -->
-    <link rel="stylesheet" href="assets/css/style.css"> <!-- Link para o css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> <!-- Link para o site dos ícones -->
-    <script src="validacao.js"></script>
+
+    <!-- Ícone na aba -->
+    <link rel="icon" type="image/png" href="img/logo2.png">
+
+    <!-- Link para o css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Link para o site dos ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
+
+    <!-- Cabeçalho fixo com menu de navegação -->
     <header>
       <div class="navbar">
           <div class="container">
@@ -30,15 +37,21 @@
     </header>
       <main>
         <div class="container">
-          <!-- Banner principal -->
-          <section class="banner" id="content">
-              <img id="Banner" src="img/banner.png" alt="Promoção especial: Café Expresso com 70% de desconto - Compre um e ganhe dois">              
-          </section>
+
+        <!-- Seção de apresentação pessoal -->
         <section id="apresentacao" class="apresentacao">
-            <h1>Olá! Eu sou a Malu</h1>
-            <p>Sou apaixonada por desenvolvimento, livros e o universo de Star Wars. Meu portfólio é uma jornada entre códigos e galáxias!</p>
-            <section id="habilidades" class="habilidades">
+          <img id="banner" class="banner" src="img/banner.png" alt="Banner com tema pessoal de Maria Luiza">
+            <h1>Olá! Eu sou a Maria Luiza</h1>
+            <p>Sou uma estudante de sistemas de informação, apaixonada por livros e o universo de Star Wars. Construir o meu portfólio foi uma jornada entre códigos e galáxias!
+              Comunicativa com facilidade para aprender novas ferramentas e tecnologias. Possuo conhecimentos na área de design, programação e banco de dados, além de, montagem e manutenção de computadores e redes.
+            </p>
+        </section>
+
+        <!-- Seção com habilidades e ferramentas -->
+        <section id="habilidades" class="habilidades">
                 <h2>Minhas Habilidades</h2>
+
+                <!-- Cada habilidade possui um ícone, nome e uma barra com porcentagem -->
                 <div class="skill">
                   <div class="skill-title">
                     <i class="fab fa-html5"></i> HTML
@@ -62,12 +75,65 @@
                     <i class="fab fa-js-square"></i> JavaScript
                   </div>
                   <div class="skill-bar">
+                    <div class="skill-fill" style="width: 45%"></div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <div class="skill-title">
+                    <i class="fa-brands fa-php"></i> PHP
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 55%"></div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <div class="skill-title">
+                    <i class="fa-brands fa-laravel"></i> Laravel
+                  </div>
+                  <div class="skill-bar">
                     <div class="skill-fill" style="width: 75%"></div>
                   </div>
                 </div>
+
+                  <div class="skill">
+                    <div class="skill-title">
+                      <i class="fa-solid fa-pen-nib"></i> Adobe Photoshop
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-fill" style="width: 75%"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill">
+                    <div class="skill-title">
+                      <i class="fa-solid fa-pen"></i> Adobe Illustrator
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-fill" style="width: 60%"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill">
+                    <div class="skill-title">
+                      <i class="fa-brands fa-figma"></i> Figma
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-fill" style="width: 80%"></div>
+                    </div>
+                  </div>
+
             </section>              
-                <section id="projetos">
+            
+            <!-- Seção com os projetos desenvolvidos -->
+            <section id="projetos">
                 <h2>Meus Projetos</h2>
+                <p>Chegou a hora de ver alguns dos projetos que fiz ao longo dessa jornada. 
+                  Abaixo você poderá acessar projetos incríveis e feitos totalmenmte do zero, desde a identidade visual até a publicação.
+                  Você pode encontrar outros projetos também na minha página do Github, disponível na sessão de contato.</p>
+
+                <!-- Card de projeto interativo (frente e verso) todos os cards seguem o mesmo padrão -->
                 <div class="projetos">
                     <div class="card">
                         <div class="card-inner">
@@ -75,7 +141,7 @@
                             <h3>T-Rex Evolution</h3>
                         </div>
                         <div class="card-back">
-                            <p>Um jogo sobre o dinossauro mais temido dos filmes. Visualize um cenário vulcânico repleto de perigos e obstáculos traiçoeiros, onde os jogadores serão desafiados a explorar e navegar com cautela.</p>
+                            <p>Visualize um cenário vulcânico repleto de perigos e obstáculos traiçoeiros, onde os jogadores serão desafiados a explorar e navegar com cautela.</p>
                             <a href="https://malubcarmo.github.io/T-Rex-Evolution.github.io/index.html" target="_blank" class="btn-projeto">Ver Projeto</a>
                         </div>
                         </div>
@@ -115,12 +181,15 @@
                     </div>                   
                 </div>
         </section>
+
+        <!-- Seção de contato com imagem, links e formulário -->
         <section id="contato" class="contato">
             <h2>Contato</h2>
+
             <div class="contato-container">             
               <!-- Esquerda: Imagem redonda estilo Estrela da Morte -->
               <div class="contato-imagem">
-                <img src="img/estrela_da_morte.png" alt="Estrela da Morte">
+                <img src="img/estrela_da_morte.png" alt="Ilustração circular da Estrela da Morte de Star Wars">
               </div>
           
               <!-- Centro: Nome e botão de currículo -->
@@ -136,22 +205,25 @@
                 <a href="https://www.behance.net/malubispo1/projects" target="_blank"><i class="fa-brands fa-behance"></i></a>
               </div>         
             </div>
+
               <!-- Formulário de contato -->
             <div class="formulario-contato">
               <form id="contatoForm" action="#" method="POST">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required aria-label="Nome">
 
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required aria-label="email">
 
                 <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required aria-label="mensagem"></textarea>
                 
                 <button type="submit">Enviar</button>
               </form>
+
+              <!-- Mensagem de confirmação oculta até envio da mensagem -->
               <div id="mensagem-confirmacao" class="mensagem-confirmacao">
-              <div id="mensagem-confirmacao" style="display: none; color: #FFD700; text-align: center; margin-top: 20px;"></div>
+              <div id="mensagem-texto" style="display: none; color: #FFD700; text-align: center; margin-top: 20px;"></div>
                 <i class="fa-solid fa-circle-check"></i> Mensagem enviada com sucesso!
               </div>
               
@@ -159,10 +231,15 @@
           </section>         
     </div>
 </main>
-            <footer>
-                <div class="container">
-                    <p>&copy; 2025. malubcarmo. "Faça ou não faça. Tentativa não há."</p>
-                </div>
-            </footer>             
+
+      <!-- Rodapé -->
+      <footer>
+        <div class="container">
+          <p>&copy; 2025. malubcarmo. "Faça ou não faça. Tentativa não há."</p>
+        </div>
+      </footer>
+
+      <!-- Validação do formulário via JavaScript -->
+      <script src="assets/js/validacao.js"></script>           
 </body>
 </html>

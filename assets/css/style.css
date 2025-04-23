@@ -4,16 +4,29 @@
   src: url('../fonts/soloist1.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'soloist-left';
-  src: url('../fonts/soloistleft1.ttf') format('truetype');
+main section {
+  display: none;
 }
+
+main section.ativo,
+main section[style*="display: block"] {
+  display: block;
+}
+
+/* O main cresce para ocupar o espaço restante */
+main {
+  flex: 1;
+}
+
 body {
   margin: 0;
-  background-color: #000; 
+  padding-top: 70px;
+  background-color: #000;
   color: #C5C6C7;
   font-family: 'soloist', sans-serif;
-  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
@@ -54,6 +67,13 @@ header {
   gap: 20px;
 }
 
+.banner {
+  display: block;
+  margin: 0 auto 60px auto; /* Espaço abaixo do banner */
+  max-width: 100%;
+  height: auto;
+}
+
 .nav-links a {
   color: #66fcf1;
   text-decoration: none;
@@ -73,11 +93,18 @@ section {
 h1, h2 {
   color: #66fcf1;
   text-align: center;
-  font-family: 'soloist-left', sans-serif;
+  font-family: 'soloist', sans-serif;
 }
 
 .apresentacao {
   text-align: center;
+}
+
+.apresentacao p {
+  max-width: 900px;     /* Limita a largura do parágrafo */
+  margin: 0 auto;       /* Centraliza o texto horizontalmente */
+  text-align: center;  /* Alinha o texto no centro */
+  line-height: 1.6;     /* (Opcional) Aumenta o espaçamento entre linhas para melhor leitura */
 }
 
 .habilidades ul {
@@ -112,7 +139,7 @@ h1, h2 {
 .skill-title {
   font-weight: bold;
   margin-bottom: 8px;
-  color: #FFD700;
+  color: #45a29e;
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -129,7 +156,7 @@ h1, h2 {
 
 .skill-fill {
   height: 100%;
-  background: linear-gradient(90deg, #FFD700, #ffcc00);
+  background: linear-gradient(90deg, #FFD700, #FF1744);
   border-radius: 10px 0 0 10px;
   transition: width 1s ease-in-out;
 }
@@ -142,9 +169,17 @@ h1, h2 {
   gap: 20px;
   max-width: 1100px;
   margin: 0 auto;
+  margin-top: 50px; /* aumenta o espaço acima dos cards */
   padding: 20px 0;
   overflow: hidden;
   box-sizing: border-box;
+}
+
+#projetos > p {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .card {
@@ -153,6 +188,7 @@ h1, h2 {
   min-width: 240px;
   height: 280px;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .card-inner {
@@ -221,13 +257,13 @@ h1, h2 {
 
 /* --- Contato --- */
 .contato {
-  background-color: #0b0c10;
   padding: 60px 20px;
 }
 
 #contato h2 {
   margin-bottom: 30px;
   padding-bottom: 5px;
+  margin-top: 60px;
 }
 
 
@@ -313,8 +349,7 @@ h1, h2 {
   border-radius: 15px;
   padding: 30px;
   max-width: 700px;
-  height: 100%;
-  margin: 80px auto 0 auto;
+  margin: 80px auto 0px auto; /* Reduzir margem inferior para 20px */
   color: #FFD700;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
@@ -343,20 +378,20 @@ h1, h2 {
 
 .formulario-contato button {
   padding: 10px 20px;
-  background-color: #FFD700;
+  background-color: #FF1744;
   border: none;
   border-radius: 8px;
-  color: #000;
+  color: #ffffff;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .formulario-contato button:hover {
-  background-color: #e6c200;
+  background-color: #66fcf1;
 }
 
-.mensagem-confirmacao {
+.mensagem-texto {
   display: none;
   color: #0B0C10;
   background-color: #FFD700;
@@ -372,10 +407,15 @@ h1, h2 {
   animation: aparecer 0.5s ease;
 }
 
-.mensagem-confirmacao i {
+.mensagem-texto i {
   margin-right: 10px;
   color: #0B0C10;
   font-size: 20px;
+}
+
+.mensagem-confirmacao {
+  display: none;
+  margin-top: 20px; /* ou ajuste como preferir */
 }
 
 /* Animação suave ao exibir */
@@ -395,7 +435,7 @@ footer {
   background-color: #0D1B2A;
   color: #C5C6C7;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   font-size: 14px;
 }
 
