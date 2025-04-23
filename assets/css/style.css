@@ -4,20 +4,23 @@
   src: url('../fonts/soloist1.ttf') format('truetype');
 }
 
+/* Oculta todas as seções do main por padrão */
 main section {
   display: none;
 }
 
+/* Exibe seção ativa ou com display: block inline */
 main section.ativo,
 main section[style*="display: block"] {
   display: block;
 }
 
-/* O main cresce para ocupar o espaço restante */
+/* O main cresce para ocupar o espaço restante na página e ajustar o footer*/
 main {
   flex: 1;
 }
 
+/* Estilização global */
 body {
   margin: 0;
   padding-top: 70px;
@@ -29,6 +32,7 @@ body {
   min-height: 100vh;
 }
 
+/* Container centralizado com largura máxima */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -36,10 +40,12 @@ body {
   box-sizing: border-box;
 }
 
+/* Estilo do cabeçalho */
 header {
   background-color: #0D1B2A;
 }
 
+/* Barra de navegação fixa no topo */
 .navbar {
   background-color: #1f2833;
   position: fixed;
@@ -58,15 +64,18 @@ header {
   margin: 0 auto;
 }
 
+/* Definição do tamanho vertical da logo */
 .logo img {
   height: 80px;
 }
 
+/* Links do menu de navegação */
 .nav-links {
   display: flex;
   gap: 20px;
 }
 
+/* Banner da página */
 .banner {
   display: block;
   margin: 0 auto 60px auto; /* Espaço abaixo do banner */
@@ -82,7 +91,8 @@ header {
 }
 
 
-/* --- CONTEÚDO --- */
+/* --- Apresentação --- */
+/* Seções do conteúdo principal */
 section {
   padding: 100px 20px;
   max-width: 1200px;
@@ -96,17 +106,14 @@ h1, h2 {
   font-family: 'soloist', sans-serif;
 }
 
-.apresentacao {
+/* Seção de apresentação */
+.apresentacao p {
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.apresentacao p {
-  max-width: 900px;     /* Limita a largura do parágrafo */
-  margin: 0 auto;       /* Centraliza o texto horizontalmente */
-  text-align: center;  /* Alinha o texto no centro */
-  line-height: 1.6;     /* (Opcional) Aumenta o espaçamento entre linhas para melhor leitura */
-}
-
+/* Lista de habilidades */
 .habilidades ul {
   list-style: none;
   padding: 0;
@@ -161,7 +168,7 @@ h1, h2 {
   transition: width 1s ease-in-out;
 }
 
-/* --- CARDS DE PROJETOS --- */
+/* --- Cards --- */
 .projetos {
   display: flex;
   justify-content: space-between;
@@ -169,7 +176,7 @@ h1, h2 {
   gap: 20px;
   max-width: 1100px;
   margin: 0 auto;
-  margin-top: 50px; /* aumenta o espaço acima dos cards */
+  margin-top: 50px;
   padding: 20px 0;
   overflow: hidden;
   box-sizing: border-box;
@@ -201,7 +208,7 @@ h1, h2 {
 }
 
 .card:hover .card-inner {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /* Faz o card girar */
 }
 
 .card-front,
@@ -229,6 +236,7 @@ h1, h2 {
   background-color: #1a1a1a;
 }
 
+/* Botão dos projetos */
 .btn-projeto {
   display: inline-block;
   padding: 8px 16px;
@@ -241,7 +249,7 @@ h1, h2 {
   font-size: 14px;
   transition: background-color 0.3s, transform 0.3s;
   text-align: center;
-  margin-top: 10px; /* Espaçamento entre o texto e o botão */
+  margin-top: 10px;
   border: 2px solid #FFD700;
 }
 
@@ -266,7 +274,7 @@ h1, h2 {
   margin-top: 60px;
 }
 
-
+/* Imagem de contato (Estrela da Morte) */
 .contato-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -288,8 +296,8 @@ h1, h2 {
 .contato-info {
   flex: 1;
   text-align: left;
-  padding: 0 100px;       /* Apenas padding horizontal */
-  margin-left: 20px;     /* Mantém espaço entre imagem e texto */
+  padding: 0 100px;
+  margin-left: 20px;
 }
 
 .contato-info h2 {
@@ -320,7 +328,7 @@ h1, h2 {
   background-color: #45a29e; /* Cor quando clica */
 }
 
-
+/* Ícones das redes sociais */
 .redes-sociais {
   display: flex;
   flex-direction: column;
@@ -343,13 +351,14 @@ h1, h2 {
   color: #FFD700; 
 }
 
+/* Formulário de contato */
 .formulario-contato {
   background-color: #000;
   border: 2px solid #FFD700;
   border-radius: 15px;
   padding: 30px;
   max-width: 700px;
-  margin: 80px auto 0px auto; /* Reduzir margem inferior para 20px */
+  margin: 80px auto 0px auto;
   color: #FFD700;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
@@ -391,6 +400,7 @@ h1, h2 {
   background-color: #66fcf1;
 }
 
+/* Mensagem de confirmação */
 .mensagem-texto {
   display: none;
   color: #0B0C10;
@@ -415,7 +425,7 @@ h1, h2 {
 
 .mensagem-confirmacao {
   display: none;
-  margin-top: 20px; /* ou ajuste como preferir */
+  margin-top: 20px;
 }
 
 /* Animação suave ao exibir */
@@ -439,19 +449,4 @@ footer {
   font-size: 14px;
 }
 
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 768px) {
-  .projetos {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  .nav-links {
-    display: none;
-  }
-}
 
